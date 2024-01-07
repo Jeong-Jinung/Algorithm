@@ -14,16 +14,16 @@ public class Main {
 
         int totalPrice = Integer.parseInt(br.readLine());
         int goodsCount = Integer.parseInt(br.readLine());
-        int[] goodsPrices = new int[goodsCount];
-
+//        int[] goodsPrices = new int[goodsCount];
+        int calculatePrice = 0;
         for (int i = 0; i < goodsCount; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int price = Integer.parseInt(st.nextToken());
             int count = Integer.parseInt(st.nextToken());
-            goodsPrices[i] = price * count;
+            calculatePrice += price * count;
         }
 
-        int calculatePrice = Arrays.stream(goodsPrices).sum();
+//        int calculatePrice = Arrays.stream(goodsPrices).sum();
 
         if (totalPrice == calculatePrice) {
             bw.write("Yes");
